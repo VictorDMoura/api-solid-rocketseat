@@ -53,3 +53,30 @@ executa npx prisma generate
 Agora para começar a trabalhar precisa instalar o @prisma/client
 
 ## Fundamentos do docker
+
+## PostgreSQL com Docker
+
+Diego usa a bitname/postgresql
+Comando docker
+
+docker run --name api-solid-pg -e POSTGRESQL_USERNAME=docker -e POSTGRESQL_PASSWORD=docker -e POSTGRESQL_DATABASE=apisolid -p 5432:5432 bitnami/postgresql
+
+docker ps - retonna todos os container rodando
+docker ps -a - retornar todo os criados
+
+docker start <passando o id ou o nome do container>
+
+docker stop para o container
+
+Posso usar no env, posso usar o DATABSE_URL
+Vou executar o npx prisma migrate dev
+npx prisma studio - para abrir o studio
+
+## Utilizando o Docker compose
+
+docker down -> deleta todos os container e remove
+docker prune também, mas é uma limpeza geral
+
+## Criando Schema do Prisma
+
+OBS para deploy usar npx prims migrate deploy
